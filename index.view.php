@@ -8,11 +8,13 @@
 <body>
   
   <ul>
-    <?php 
-      foreach($animals as $animal) {
-        echo "<li>$animal</li>";
-      }
-    ?>
+    <?php foreach($tasks as $task) : ?>
+
+      <?php foreach($task as $key => $val) : ?>
+        <li><strong><?= $key ?></strong>: <?= $val ?></li>
+      <?php endforeach ?>
+
+    <?php endforeach ?>
   </ul>
   
 </body>

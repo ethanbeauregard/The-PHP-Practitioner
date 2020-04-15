@@ -1,11 +1,14 @@
 <?php 
 
-$animals = [
-  'lions',
-  'tigers',
-  'Bears',
-  'Fish',
-  'Dogs'
-];
+$tasks = [
+  [
+    'Title' => 'Coding',
+    'Due' => 'Today',
+    'Assigned To' => 'Ethan',
+    'Completed' => true
+  ]
+
+  ];
+
 
 require 'index.view.php';
