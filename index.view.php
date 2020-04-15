@@ -8,13 +8,21 @@
 <body>
   
   <ul>
-    <?php foreach($tasks as $task) : ?>
+    <li>
+      <strong>Task: </strong> <?= $task['title']; ?>
+    </li>
 
-      <?php foreach($task as $key => $val) : ?>
-        <li><strong><?= $key ?></strong>: <?= $val ?></li>
-      <?php endforeach ?>
+    <li>
+      <strong>Due Date: </strong> <?= $task['due']; ?>
+    </li>
 
-    <?php endforeach ?>
+    <li>
+      <strong>Assigned To: </strong> <?= $task['assigned to']; ?>
+    </li>
+
+    <li>
+      <strong>Status: </strong> <?= $task['completed'] ? 'Completed' : 'Incompleted'; ?>
+    </li>
   </ul>
   
 </body>

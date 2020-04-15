@@ -1,12 +1,11 @@
 <?php 
 
-$tasks = [
-  [
-    'Title' => 'Coding',
-    'Due' => 'Today',
-    'Assigned To' => 'Ethan',
-    'Completed' => true
-  ]
+$task = [
+  'title' => 'Coding',
+  'due' => 'Today',
+  'assigned to' => 'Ethan',
+  'completed' => false
+
 
   ];
 
