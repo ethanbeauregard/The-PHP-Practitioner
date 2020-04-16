@@ -4,9 +4,8 @@ $task = [
   'title' => 'Coding',
   'due' => 'Today',
   'assigned to' => 'Ethan',
-  'completed' => false
-
-
+  'completed' => false,
+  'sleepy' => false
   ];
 
 

@@ -21,7 +21,24 @@
     </li>
 
     <li>
-      <strong>Status: </strong> <?= $task['completed'] ? 'Completed' : 'Incompleted'; ?>
+      <strong>Status: </strong> 
+      <!-- <?= $task['completed'] ? 'Completed' : 'Incompleted'; ?> -->
+
+      <?php if($task['completed']) : ?>
+          <span>&#9989;</span>
+        <?php else : ?>
+          <span>Incompleted</span>
+      <?php endif ?>
+    </li>
+
+    <li>
+      <Strong>Tired? : </Strong>
+          
+      <?php if($task['sleepy']) : ?>
+          <strong>YES!</strong>
+        <?php else : ?>
+          <em>no</em>
+      <?php endif ?>
     </li>
   </ul>
   
