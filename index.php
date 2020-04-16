@@ -1,5 +1,7 @@
 <?php 
 
+require '/functions.php';
+
 $task = [
   'title' => 'Coding',
   'due' => 'Today',
@@ -7,6 +9,8 @@ $task = [
   'completed' => false,
   'sleepy' => false
   ];
+
+  checkAge(21);
 
 
 require 'index.view.php';
