@@ -6,41 +6,21 @@
   <title>Document</title>
 </head>
 <body>
-  
   <ul>
-    <li>
-      <strong>Task: </strong> <?= $task['title']; ?>
-    </li>
+    <?php foreach($tasks as $task) : ?>
 
-    <li>
-      <strong>Due Date: </strong> <?= $task['due']; ?>
-    </li>
+      <li>
 
-    <li>
-      <strong>Assigned To: </strong> <?= $task['assigned to']; ?>
-    </li>
+      <?php if($task->completed) : ?>
+        <strike><?= $task->description; ?></strike>
+      <?php else : ?>
+        <?= $task->description; ?>
+      <?php endif; ?>
+  
+      </li>
 
-    <li>
-      <strong>Status: </strong> 
-      <!-- <?= $task['completed'] ? 'Completed' : 'Incompleted'; ?> -->
-
-      <?php if($task['completed']) : ?>
-          <span>&#9989;</span>
-        <?php else : ?>
-          <span>Incompleted</span>
-      <?php endif ?>
-    </li>
-
-    <li>
-      <Strong>Tired? : </Strong>
-          
-      <?php if($task['sleepy']) : ?>
-          <strong>YES!</strong>
-        <?php else : ?>
-          <em>no</em>
-      <?php endif ?>
-    </li>
-  </ul>
+    <?php endforeach; ?>
+  </ul> 
   
 </body>
 </html>
