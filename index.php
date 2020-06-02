@@ -1,31 +1,55 @@
-<?php 
+<?php
 
-class Task {
+class Team {
 
-  public $description;
+  protected $name;
 
-  public $completed = false;
-  
-  public function __construct($description) {
-    $this->description = $description;
+  protected $members = [];
+
+  public function __construct($name, $members = []) {
+    $this->name = $name;
+    $this->members = $members;
   }
 
-  public function complete() {
-    $this->completed = true;
+  public static function start(...$params) {
+    return new static(...$params);
   }
 
-  public function iscomplete() {
-    $this->completed;
+  public function name($name) {
+    return $this->name;
+  }
+
+  public function members() {
+    return $this->members;
+  }
+  public function add($name) {
+    $this->members[] = $name;
+  }
+  public function cancel() {
+
+  }
+  public function manage() {
+
   }
 }
 
-$tasks = [
-  new Task('Go to the store'),
-  new Task('Pick up eggs'),
-  new Task('Pick up bread')
-];
+class Members {
+  protected $name;
 
-$tasks[0]->complete();
+  public function __construct($name) {
+    $this->name = $name;
+  }
+
+  public function lastViewed() {
+
+  }
+}
+
+$acme = Team::start('acme', [
+  new Members('James'),
+  new Members('Tommy')
+]);
 
 
-require 'index.view.php';
+var_dump($acme->members());
+// require 'index.view.php';
