@@ -12,4 +12,8 @@ class QueryBuilder {
 
     $statement->execute();
   }
+
+  public function insert($table, $parameter) {
+    
+  }
 }

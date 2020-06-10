@@ -1,5 +1,7 @@
 <?php 
 
+require 'vendor/autoload.php';
+
 $database = require 'core/bootstrap.php';
 $routes = new Router;
 
@@ -8,5 +10,5 @@ $routes = new Router;
 
 // die(var_dump($app));
 require Router::load('routes.php')
-  ->direct(Request::uri());
+  ->direct(Request::uri(), Request::method());
 
